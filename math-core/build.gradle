@@ -1,0 +1,9 @@
+version = parent.version
+group = parent.group
+description = 'Core math functionality'
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+dependencies {
+}

@@ -1,0 +1,10 @@
+version = parent.version
+group = parent.group
+description = 'Image generation logic'
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+dependencies {
+    compile project(':math-core')
+}

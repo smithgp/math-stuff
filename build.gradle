@@ -1,0 +1,19 @@
+version = '1.0.0'
+group = 'gsmith.math'
+
+apply plugin: 'base'
+
+subprojects {
+    afterEvaluate { sub ->
+        if (sub.plugins.hasPlugin('java')) {
+            sub.sourceCompatibility = 1.8
+            sub.targetCompatibility = 1.8
+        }
+    }
+}
+
+task wrapper(type: Wrapper,
+             description: 'Generate/update the gradlew setup in the project') {
+    gradleVersion = '2.12'
+}
+
