@@ -7,15 +7,19 @@ import javax.swing.JComponent;
 
 /** A component that paints an image.
  */
-public class ImageComponent extends JComponent implements Imagable {
-    private Image image;
+public class ImageComponent<I extends Image> extends JComponent implements Imagable<I> {
+    private I image;
     public ImageComponent() {
         super();
         image = null;
     }
 
+    public I getImage() {
+        return image;
+    }
+
     @Override
-    public void setImage(Image image) {
+    public void setImage(I image) {
         this.image = image;
         repaint();
     }
